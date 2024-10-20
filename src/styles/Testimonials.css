@@ -2,7 +2,7 @@
 .testimonials {
   padding: 3rem;
   background-color: #e9f0f6; /* Light gray for a softer background */
-  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow: hidden; /* Hide scrollbar */
 }
 
 .testimonials-title {
@@ -13,15 +13,26 @@
 }
 
 .testimonials-container {
-  display: flex; /* Keep items in a single row */
-  gap: 2rem; /* Space between testimonials */
+  display: flex;
+  gap: 1.5rem;
+  animation: scroll 30s linear infinite; /* Continuous scrolling animation */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Scroll left by half the total width of the container */
+  }
 }
 
 .testimonial-card {
   background-color: #ffffff; /* White background for cards */
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 280px; /* Fixed width for cards */
+  flex: 0 0 30%; /* Show 3 cards at a time */
+  max-width: 280px;
   padding: 1.5rem;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -30,15 +41,6 @@
 .testimonial-card:hover {
   transform: translateY(-5px); /* Lift effect on hover */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.testimonial-photo {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  object-fit: cover;
-  border: 2px solid #1e90ff; /* Accent border */
 }
 
 .testimonial-name {
@@ -60,12 +62,18 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .testimonial-card {
+    flex: 0 0 45%; /* Two cards visible on medium screens */
+  }
+}
+
 @media (max-width: 768px) {
   .testimonials-title {
     font-size: 2rem; /* Adjust title size for smaller screens */
   }
 
   .testimonial-card {
-    width: 90%; /* Adjust width for mobile devices */
+    flex: 0 0 90%; /* One card visible on small screens */
   }
 }
