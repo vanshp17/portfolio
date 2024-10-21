@@ -1,9 +1,7 @@
-// src/components/Contact.js
 import React, { useState } from 'react';
 import '../styles/Contact.css'; // Import the specific styles for Contact component
 
 const Contact = () => {
-  // Define form state and error state using useState
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -13,7 +11,6 @@ const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState({});
 
-  // Form validation function
   const validateForm = () => {
     const newErrors = {};
     if (!formData.name) newErrors.name = 'Name is required';
@@ -22,7 +19,6 @@ const Contact = () => {
     return newErrors;
   };
 
-  // Handle form input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -31,14 +27,26 @@ const Contact = () => {
     });
   };
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     const validationErrors = validateForm();
     if (Object.keys(validationErrors).length === 0) {
-      console.log('Form submitted:', formData);
-      setIsSubmitted(true);
-      setFormData({ name: '', email: '', message: '' }); // Reset form
+      fetch('http://localhost:5000/submit-form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+        .then(response => response.text())
+        .then(data => {
+          console.log('Success:', data);
+          setIsSubmitted(true);
+          setFormData({ name: '', email: '', message: '' }); // Reset form
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
       setErrors({});
     } else {
       setErrors(validationErrors);
