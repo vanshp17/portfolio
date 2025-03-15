@@ -1,13 +1,23 @@
   import React, { useState } from 'react';
   import '../styles/Projects.css'; // Import the specific styles for Projects component
-  import salesImg from '../assets/images/sales.png';
-  import customerImg from '../assets/images/customer.jpg';
-  import revenueImg from '../assets/images/revenue.jpg';
-  import predictiveImg from '../assets/images/predictive.png';
-  import reccsystemImg from '../assets/images/reccsystem.png';
-  import fraudImg from '../assets/images/fraud.png';
-  import laptopImg from '../assets/images/laptop.png';
+  // import salesImg from '../assets/images/sales.png';
+  // import customerImg from '../assets/images/customer.jpg';
+  // import revenueImg from '../assets/images/revenue.jpg';
+  // import predictiveImg from '../assets/images/predictive.png';
+  // import reccsystemImg from '../assets/images/reccsystem.png';
+  // import fraudImg from '../assets/images/fraud.png';
+  // import laptopImg from '../assets/images/laptop.png';
+  import laptop2Img from '../assets/images/laptop2.png';
+  import roadImg from '../assets/images/road.png';
+  import t20Img from '../assets/images/t20.png';
+  import carImg from '../assets/images/car.png';
+  import churnImg from '../assets/images/churn.png';
+  import churnDashboard from '../assets/images/churnDashboard.png';
+  import sales2Img from '../assets/images/sales2.png';
+  import gpaImg from '../assets/images/gpa.png';
   
+  
+
   
   
   
@@ -15,163 +25,245 @@
     dataAnalyst: [
       {
         id: 1,
-        name: 'Sales Dashboard',
-        image: salesImg, // Correct image reference
+        name: 'Road Accident Dashboard',
+        image: roadImg, // Correct image reference
         demoLink: 'https://your-demo-link.com/sales-dashboard', // Add proper demo link
         githubLink: 'https://github.com/your-repo/sales-dashboard', // Add GitHub link
+        problemStatement: [
+          'The project involves analyzing road accident data to identify key patterns and factors contributing to accidents. The objective is to develop a dashboard that provides actionable insights for policymakers, traffic authorities, and the general public to enhance road safety measures.'
+        ],
+        objective: [
+          'To analyze road accident data, identify trends, and provide insights through visualizations. The project involves analyzing data, identifying key indicators, and creating an actionable tool that helps stakeholders make informed decisions.'
+        ],
         dataCollection: [
-          'Collected sales data from various sources.',
+          'Collected accident data from multiple sources.',
           'Performed data cleaning, removing inconsistencies and errors.',
-          'Engineered features such as total sales per region.',
+          'Engineered features such as accident severity by road type and weather conditions.',
         ],
         eda: [
-          'Analyzed sales trends across different regions.',
-          'Used bar charts to visualize top-performing sales teams.',
-          'Performed statistical analysis to detect sales outliers.',
-        ],
-        modeling: [
-          'Segmentation of sales data by region.',
-          'Used time series forecasting to predict future sales trends.',
+          'Analyzed accident trends across different years and months.',
+          'Used bar charts to visualize accident severity by vehicle type.',
+          'Performed statistical analysis to detect accident-prone areas.',
         ],
         keyFeatures: [
-          'Region-wise sales performance',
-          'Top-selling products',
-          'Sales per employee',
+          'Accident severity by road type and junction control.',
+          'Impact of weather and lighting conditions on accident frequency.',
+          'Vehicle types most involved in accidents.',
         ],
-        modelEvaluation: [
-          'Used RMSE and MAE for time series model evaluation.',
-          'Confusion matrix for classification model evaluation.',
+        insights:[
+          'Accidents were highest in urban areas with uncontrolled junctions.',
+          'Fatal accidents were more common in poor lighting conditions and icy road surfaces.',
+          'Motorcycles and cars were the most involved vehicle types in accidents.',
+          'Traffic signals and controlled junctions reduced accident severity',
         ],
-        insights:
-          'Sales were highest in region X during the summer season, and sales dropped in region Y during winter months.',
         challenges: [
-          'Data discrepancies between different sources.',
-          'Handling missing data for certain time periods.',
+          'Data discrepancies between different reporting authorities.',
+          'Handling missing data for certain accident attributes.',
         ],
-        tools: ['Python (Pandas, NumPy)', 'Power BI for data visualization', 'SQL for querying the database'],
+        tools: ['Excel', 'Excel for data visualization'],
         results:
-          'Developed a comprehensive sales dashboard, helping the business identify key regions for expansion.',
+          'Developed a comprehensive road accident dashboard, helping traffic authorities identify high-risk zones and implement preventive measures.',
         futureImprovements: [
-          'Incorporate real-time data to improve decision-making.',
-          'Use machine learning models for more accurate sales predictions.',
+          'Incorporate real-time accident data for more accurate analysis.',
+          'Integrate dashboard with GIS mapping for better spatial analysis.',
         ],
       },
       {
         id: 2,
-        name: 'Customer Segmentation',
-        image: customerImg,
+        name: 'Customer Churn Analysis',
+        image: churnDashboard,
         demoLink: 'https://your-demo-link.com/customer-segmentation',
-        githubLink: 'https://github.com/your-repo/customer-segmentation',
+        githubLink: 'https://github.com/vanshp17/customers-churn-prediction/blob/main/ChurnProjectReport.pbix',
+        problemStatement: [
+          'Analyze customer behavior and transaction history to identify key factors influencing customer churn in an e-commerce platform. The goal is to provide data-driven insights to help businesses retain customers.'
+        ],
+        objective: [
+          'Understand patterns and trends in customer churn.',
+          'Identify critical factors that contribute to customer retention and churn.',
+          'Provide actionable recommendations for improving customer engagement and satisfaction.',
+        ],
         dataCollection: [
-          'Collected customer purchase history and demographic data.',
-          'Cleaned the data by removing duplicates and standardizing formats.',
-          'Engineered features such as purchase frequency and customer lifetime value.',
+          'Used an Excel dataset containing customer demographics, transactions, and interactions.',
+          'Handled missing values and performed necessary data cleaning.',
+          'Feature engineering: Created new variables such as customer tenure and interaction frequency.',
+          'Outlier detection & treatment: Used boxplots and statistical methods.',
+          'Categorical encoding: Converted categorical features for effective analysis.',
         ],
         eda: [
-          'Analyzed customer purchase patterns using clustering techniques.',
-          'Used scatter plots to visualize customer segments.',
-          'Identified high-value customer groups.',
+          'Analyzed customer demographics, purchasing behavior, and platform usage.',
+          'Visualized key insights such as:',
+          'Impact of tenure and order history on churn.',
+          'Preferred payment modes and their influence on retention.',
+          'Effect of cashback and coupons on customer loyalty.',
+          'Correlation between customer complaints and churn rates.',
+          'Used bar charts, histograms, boxplots, and heatmaps for visualization',
         ],
-        modeling: [
-          'Used K-Means clustering to segment customers.',
-          'Tested different numbers of clusters to find the optimal segmentation.',
-        ],
-        keyFeatures: ['Customer Lifetime Value', 'Purchase Frequency', 'Average Transaction Value'],
-        modelEvaluation: ['Evaluated clustering results using silhouette score and elbow method.'],
+        // modeling: [
+        //   'Used K-Means clustering to segment customers.',
+        //   'Tested different numbers of clusters to find the optimal segmentation.',
+        // ],
+        keyFeatures: ['Tenure – Longer tenure reduces churn likelihood.',
+          'OrderCount & DaySinceLastOrder – Customers with frequent transactions are more loyal.',
+          'SatisfactionScore – Higher scores indicate better retention rates.',
+          'CashbackAmount & CouponUsed – Incentives impact customer loyalty.',
+          'Complain – Customers with unresolved complaints have a higher churn rate',
+      ],
+        // modelEvaluation: ['Evaluated clustering results using silhouette score and elbow method.'],
         insights:
-          'Identified three major customer segments: high-value, mid-value, and low-value customers. High-value customers contributed to 70% of revenue.',
-        challenges: ['Determining the optimal number of customer segments.', 'Handling noise and outliers in purchase data.'],
-        tools: ['Python (Scikit-learn for clustering)', 'SQL for querying customer data', 'Excel for initial data exploration'],
-        results: 'The customer segmentation model allowed targeted marketing efforts, increasing customer retention by 15%.',
+          [
+            'Retention Strategies: Increase engagement for customers with low order counts.',
+          'Personalized Offers: Provide cashback and coupon incentives for at-risk customers.',
+          'Customer Support Improvement: Address complaints quickly to improve retention.',
+          ],
+        challenges: [
+          'Data Imbalance: Majority of customers did not churn, requiring oversampling techniques.',
+          'Feature Selection: Identifying the most impactful variables for model performance.', 
+        ],
+        tools: ['Python (Scikit-learn for clustering)', 'Jupyter Notebook for analysis and visualization','Power BI for interactive dashboards'],
+        results: [
+          'Provided data-driven insights to help businesses reduce churn.',
+          'Identified key areas for improvement in customer engagement strategies.',
+        ],
         futureImprovements: [
-          'Incorporate additional behavioral data such as website activity.',
-          'Use deep learning techniques for more accurate segmentation.',
+          'Conduct sentiment analysis on customer reviews and complaints.','Use real-time transaction data for better churn prediction',
         ],
       },
       {
       id: 3,
-      name: 'Revenue Analysis',
-      image: revenueImg, // Correct image reference
+      name: 'Google Play Store Analysis',
+      image: gpaImg, // Correct image reference
       demoLink: 'https://your-demo-link.com/revenue-analysis', // Add proper demo link
-      githubLink: 'https://github.com/your-repo/revenue-analysis', // Add GitHub link
+      githubLink: 'https://github.com/vanshp17/GooglePlayStoreAnalysis', // Add GitHub link
+      problemStatement: 'The Google Play Store hosts thousands of apps, making it essential for developers and investors to analyze trends and make data-driven decisions. This project focuses on visualizing key insights from the Play Store dataset using Power BI.',
+      objective: 'Develop an interactive Power BI dashboard to provide insights into app performance, installs, revenue trends, and user behavior on the Google Play Store.',
       dataCollection: [
-        'Collected revenue data from sales reports and financial statements.',
-        'Cleaned and preprocessed data to ensure accuracy.',
-        'Engineered features like monthly revenue growth rates.',
+        'Dataset: Google Play Store dataset (~10,841 records, 13 columns).',
+        'Preprocessing Steps:',
+        'Handled missing values in the Rating column.',
+        'Converted Reviews, Installs, and Price to numeric format.',
+        'Removed duplicate app records for data consistency.',
       ],
       eda: [
-        'Analyzed revenue trends over the last 5 years.',
-        'Visualized seasonal variations using line graphs.',
-        'Identified key drivers of revenue growth through correlation analysis.',
+        ' Identified outliers in installs and ratings.',
+        'Analyzed category-wise distribution of apps.',
+        'Detected trends in paid vs. free app revenues.',
       ],
-      modeling: [
-        'Implemented linear regression to forecast future revenues.',
-        'Used time series analysis to capture seasonal trends.',
-      ],
+      // modeling: [
+      //   'Implemented linear regression to forecast future revenues.',
+      //   'Used time series analysis to capture seasonal trends.',
+      // ],
       keyFeatures: [
-        'Monthly and yearly revenue breakdowns',
-        'Revenue growth forecasts',
-        'Key revenue drivers identified',
+        'Top App Categories by Installs:',
+        'Games (28B Installs)',
+        'Communication (17B Installs)',
+        'Tools (11B Installs)',
+        'App Type Breakdown:',
+        'Free Apps: 92.67%',
+        'Paid Apps: 7.33%',
+        'Top Apps by Installs:',
+        'Google Photos',
+        'Hangouts',
+        'Subway Surfers',
+        'App Distribution by Content Rating:',
+        'Majority rated "Everyone"',
+        'Fewest apps are "Unrated" ',
       ],
-      modelEvaluation: [
-        'Evaluated regression model performance using R² and adjusted R².',
-        'Performed residual analysis for model diagnostics.',
-      ],
-      insights:
-        'Revenue grew by 15% annually, driven by product X and marketing initiatives in Q2.',
+      // modelEvaluation: [
+      //   'Evaluated regression model performance using R² and adjusted R².',
+      //   'Performed residual analysis for model diagnostics.',
+      // ],
+      insights:[
+        'Category-wise Total Installs – Bar Chart',
+        'Percentage of Free vs. Paid Apps – Pie Chart',
+        'Sum of Reviews by Category – Stacked Column Chart',
+        'Count of Apps by Content Rating – Tree Map',
+        'Top Apps by Installs – Table',
+        'Count of Apps by Category – Heatmap',
+    ],
       challenges: [
-        'Data integration from multiple systems was complex.',
-        'Identifying external factors impacting revenue was challenging.',
+        'Handling outliers in revenue and installs.',
+        'Managing data inconsistencies in category names.',
+        'Aggregating revenue for paid apps across different price points',
       ],
-      tools: ['Python (Pandas, StatsModels)', 'Power BI for visualization', 'SQL for data extraction'],
-      results:
-        'Developed a detailed revenue analysis report that informed strategic planning and investment decisions.',
+      tools: ['Power BI – Dashboard creation',
+      'Excel – Initial data exploration',
+      'SQL – Querying and retrieving cleaned data',
+      'Python (Pandas, Matplotlib, Seaborn) – Data preprocessing and EDA'],
+      results:[
+        'Developed a dynamic Power BI dashboard that provides:',
+        'Market trends & key insights into app categories and installs.',
+        'Revenue distribution analysis for free vs. paid apps.',
+        'Content rating analysis to understand audience segmentation.',
+      ],
       futureImprovements: [
-        'Integrate real-time revenue tracking capabilities.',
-        'Explore advanced forecasting techniques using machine learning.',
+        'Incorporate real-time Play Store data updates.',
+        'Use machine learning to predict app success based on ratings & reviews.',
+        'Enhance category-wise revenue analysis for better monetization strategies.',
       ],
       },
       {
         id: 4,
         name: 'Sales Dashboard',
-        image: salesImg, // Correct image reference
+        image: sales2Img, // Correct image reference
         demoLink: 'https://your-demo-link.com/sales-dashboard', // Add proper demo link
-        githubLink: 'https://github.com/your-repo/sales-dashboard', // Add GitHub link
+        githubLink: 'https://github.com/vanshp17/SalesAnalysisForecasting', // Add GitHub link
+        problemStatement: [
+          'Royal Store wants to analyze sales performance, identify key trends, and forecast future sales to optimize business strategies.'
+        ],
+        objective: [
+          'Develop an interactive Power BI dashboard to visualize sales insights and predict future sales trends for better decision-making.',
+        ],
         dataCollection: [
-          'Collected sales data from various sources.',
-          'Performed data cleaning, removing inconsistencies and errors.',
-          'Engineered features such as total sales per region.',
+          'Dataset: Sales data from 2019 & 2020 (Excel, ~6,000 rows).',
+          'Preprocessing Steps:',
+          'Cleaned missing values and removed duplicate records.',
+          'Standardized date formats and corrected inconsistent entries.',
+          'Engineered new features, such as average delivery time per regio',
         ],
         eda: [
-          'Analyzed sales trends across different regions.',
-          'Used bar charts to visualize top-performing sales teams.',
-          'Performed statistical analysis to detect sales outliers.',
+          'Analyzed sales trends across different segments and regions.',
+          'Visualized top-performing sub-categories using bar charts.',
+          'Performed statistical analysis to detect seasonal trends & anomalies.',
         ],
-        modeling: [
-          'Segmentation of sales data by region.',
-          'Used time series forecasting to predict future sales trends.',
-        ],
+        // modeling: [
+        //   'Segmentation of sales data by region.',
+        //   'Used time series forecasting to predict future sales trends.',
+        // ],
         keyFeatures: [
-          'Region-wise sales performance',
-          'Top-selling products',
-          'Sales per employee',
+          'Region-wise Sales Performance: Highest profit in West USA, lowest in South USA.',
+          'Top-Selling Products: Phones, Chairs, and Binders contributed the most revenue.',
+          'Sales by Segment: Consumer (48%), Corporate (33%), Home Office (19%).',
+          'Payment Mode Breakdown: COD (43%), Online (35%), Cards (22%).',
         ],
-        modelEvaluation: [
-          'Used RMSE and MAE for time series model evaluation.',
-          'Confusion matrix for classification model evaluation.',
+        // modelEvaluation: [
+        //   'Used RMSE and MAE for time series model evaluation.',
+        //   'Confusion matrix for classification model evaluation.',
+        // ],
+        insights:[
+          'Sales peaked in December 2020—suggests holiday promotions drive revenue.',
+         'April 2020 profit decline despite high sales—possible discount-heavy strategy.',
+          'Expanding operations in high-profit regions (California, New York, Texas) could boost revenue..',
         ],
-        insights:
-          'Sales were highest in region X during the summer season, and sales dropped in region Y during winter months.',
         challenges: [
-          'Data discrepancies between different sources.',
-          'Handling missing data for certain time periods.',
+          'Data inconsistencies in sales records from different locations.',
+          'Missing delivery data for some regions, requiring imputation.',
+          'Balancing dashboard simplicity while maintaining data depth.',
         ],
-        tools: ['Python (Pandas, NumPy)', 'Power BI for data visualization', 'SQL for querying the database'],
-        results:
-          'Developed a comprehensive sales dashboard, helping the business identify key regions for expansion.',
+        tools: ['Power BI – Data visualization & interactive dashboard creation',
+          'Excel – EDA and data cleaning',
+          'DAX (Data Analysis Expressions) – Custom metric calculations',
+          'SQL – Querying and aggregating sales data]',
+        ],
+        results:[
+          'Developed a dynamic Power BI sales dashboard with:',
+        'Real-time sales trends',
+        'Forecasting models for future sales prediction',
+        'Regional performance insights.',
+        ],
         futureImprovements: [
-          'Incorporate real-time data to improve decision-making.',
-          'Use machine learning models for more accurate sales predictions.',
+          'Incorporate real-time data feeds for live sales monitoring.',
+        'Use machine learning models for more accurate forecasting.',
+        'Enhance customer segmentation to improve targeted marketing strategies.',
         ],
       },
       // Add more data analyst projects here
@@ -179,140 +271,228 @@
     dataScientist: [
       {
         id: 1,
-        name: 'Predictive Modeling for Churn',
-        image: predictiveImg,
+        name: 'Customer Churn Prediction',
+        image: churnImg,
         demoLink: 'https://your-demo-link.com/churn-modeling',
-        githubLink: 'https://github.com/your-repo/churn-modeling',
+        githubLink: 'https://github.com/vanshp17/customers-churn-prediction',
+        problemStatement: [
+          'Predict whether a customer will churn from an e-commerce platform based on their behavior and transaction history. The goal is to help businesses take proactive measures to retain customers and improve satisfaction.'
+        ],
+        objective: [
+          'Develop a machine learning model to predict customer churn.',
+          'Identify key factors contributing to customer churn.',
+          'Provide actionable insights to improve customer retention strategies.',
+        ],
         dataCollection: [
-          'Collected customer interaction and transaction data from multiple channels.',
-          'Cleaned the data by addressing missing values and outliers.',
-          'Feature engineered attributes like frequency of interaction and tenure.',
+          'Used an Excel dataset containing customer behavior and transaction data.',
+          'Handled missing values using appropriate imputation techniques.',
+          'Feature engineering: Created new variables such as customer tenure and interaction frequency.',
+          'Outlier detection & capping: Used boxplots and statistical methods to handle extreme values.',
+          'Encoding categorical variables: Applied Label Encoding for categorical features.',
         ],
         eda: [
-          'Visualized churn trends using histograms and scatter plots.',
-          'Explored correlations between churn and various features.',
-          'Performed hypothesis testing to validate key assumptions.',
+          'Analyzed customer behavior patterns and correlations with churn.',
+          'Visualized key insights such as:',
+          'Impact of tenure and order history on churn.',
+          'Preferred payment modes and their relation to retention.',
+          'Effect of cashback and coupons on customer loyalty',
         ],
-        modeling: ['Built models using Logistic Regression, Random Forest, and XGBoost.', 'Performed hyperparameter tuning using grid search.'],
-        keyFeatures: ['Customer Tenure', 'Frequency of Interaction', 'Last Purchase Date'],
-        modelEvaluation: ['Evaluated models using ROC AUC score, precision, recall, and F1 score.', 'Confusion matrix analysis to minimize false negatives.'],
-        insights: 'Customers with shorter tenure and reduced interaction frequency were more likely to churn.',
-        challenges: ['Imbalanced dataset requiring techniques like SMOTE to balance classes.', 'Feature selection was challenging due to correlated features.'],
-        tools: ['Python (Pandas, Scikit-learn, XGBoost)', 'Jupyter Notebook for development', 'Power BI for visualizations'],
-        results: 'The final model achieved an accuracy of 85% with high recall, helping reduce churn by 20%.',
-        futureImprovements: ['Implement a real-time churn prediction system.', 'Explore more advanced techniques such as deep learning models.'],
+        modeling: [
+          'Trained multiple classification models, including:',
+          'Logistic Regression',
+          'Decision Tree Classifier',
+         ' Random Forest Classifier',
+         ' XGBoost Classifier',
+         ' Addressed class imbalance using SMOTETomek from the imbalanced-learn library.',
+],
+        keyFeatures: ['Tenure – Longer tenure reduces churn likelihood.',
+          'OrderCount & DaySinceLastOrder – Customers with frequent transactions are more loyal.',
+          'SatisfactionScore – Higher scores indicate better retention rates.',
+          'CashbackAmount & CouponUsed – Incentives impact customer loyalty.',
+          'Complain – Customers with unresolved complaints have a higher churn rate',
+        ],
+        modelEvaluation: [
+          'Used Accuracy Score, ROC AUC Score, Confusion Matrix, and Classification Report for performance evaluation.',
+          'Random Forest & XGBoost performed best, achieving the highest accuracy and ROC AUC scores.',
+        ],
+        insights: [
+          'Retention Strategies: Increase engagement for customers with low order counts.',
+          'Personalized Offers: Provide cashback and coupon incentives for at-risk customers.',
+          'Customer Support Improvement: Address complaints quickly to improve retention.',
+        ],
+        challenges: [
+          'Data Imbalance: Majority of customers did not churn, requiring oversampling techniques.',
+          'Feature Selection: Identifying the most impactful variables for model performance.', 
+          ],
+        tools: ['Python (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, Plotly)', 'Jupyter Notebook for model training and analysis', 'Machine Learning Models: Logistic Regression, Decision Tree, Random Forest, XGBoost','Imbalanced-learn for handling class imbalance'],
+        results: [
+          'Achieved high prediction accuracy, with XGBoost providing the best performance.',
+          'Business can now proactively identify at-risk customers and implement targeted retention strategies.',
+        ],
+        futureImprovements: ['Explore deep learning models for improved accuracy.',
+          'Incorporate real-time customer interaction data for better insights.',
+        ],
       },
       // Add more data scientist projects here
       
           {
             id: 2,
-            name: 'Fraud Prediction',
-            image: fraudImg, // Replace with your actual image import
+            name: 'T-20 World Cup Prediction',
+            image: t20Img, // Replace with your actual image import
             demoLink: 'https://your-demo-link.com/fraud-prediction',
-            githubLink: 'https://github.com/your-repo/fraud-prediction',
+            githubLink: 'https://github.com/vanshp17/t20-world-cup-analysis',
+            problemStatement: [
+              'Predicting the final scores of T20 World Cup matches based on real-time match conditions using machine learning techniques.'
+            ],
+            objective: [
+              'To develop a machine learning model that accurately predicts the final score of a T20 match using factors like batting team, bowling team, current score, overs, wickets, and match location.'
+            ],
             dataCollection: [
-              'Collected transaction data from various sources including online payments and user accounts.',
-              'Cleaned data by removing duplicates and handling missing values.',
-              'Engineered features like transaction amount, user location, and transaction frequency.',
+              'Collected T20 match data from Kaggle',
+              'Cleaned and preprocessed the dataset by handling missing values and duplicates.',
+              "Extracted relevant match statistics, such as team performance, venue influence, and recent overs' impact."
             ],
             eda: [
-              'Analyzed transaction distributions and identified patterns using visualizations.',
-              'Explored relationships between features and fraudulent transactions.',
-              'Performed anomaly detection to identify unusual patterns in the data.',
+              'Analyzed scoring trends across different teams and venues.',
+              'Explored the impact of wickets lost and runs scored in the last 5 overs.',
+              'Visualized key factors influencing match outcomes.',
             ],
             modeling: [
               'Built models using Logistic Regression, Random Forest, and Gradient Boosting.',
               'Utilized techniques like cross-validation and grid search for hyperparameter tuning.',
             ],
-            keyFeatures: ['Transaction Amount', 'Transaction Time', 'User Location'],
+            keyFeatures: ['Batting team','Bowling team','City (match venue)','Current score','Overs completed','Wickets lost','Runs scored in the last 5 overs'],
             modelEvaluation: [
-              'Evaluated models using AUC-ROC curve, precision, recall, and F1 score.',
-              'Conducted feature importance analysis to identify critical predictors.',
+              'valuated models using RMSE (Root Mean Square Error).',
+              'Compared different regression models for accuracy.',
             ],
-            insights: 'Certain transaction patterns, such as high amounts and unusual locations, indicated higher fraud risk.',
+            insights: ['Matches played in certain venues have higher scoring patterns.',
+            'Losing early wickets significantly reduces predicted scores.',
+            'The last 5-over performance is a key factor in determining final scores.'],
             challenges: [
-              'Dealing with class imbalance in the dataset.',
-              'Model interpretability was a challenge due to the complexity of ensemble models.',
+              'Handling missing data and inconsistencies in match records.',
+              'Managing venue-based differences in scoring patterns.',
+              'Selecting the most influential features for accurate predictions',
             ],
-            tools: ['Python (Pandas, Scikit-learn, XGBoost)', 'Jupyter Notebook for development', 'Tableau for visualizations'],
-            results: 'Achieved an accuracy of 90% with a high recall of fraudulent transactions, significantly reducing losses.',
+            tools: ['Programming Languages: Python',
+              'Libraries: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, XGBoost',
+              'Development Tools: Jupyter Notebook, Streamlit',
+              'Visualization: Streamlit Web App'],
+            results: ['Achieved a well-optimized score prediction model.',
+              'Integrated the model into a Streamlit application for user-friendly predictions.',
+            ],
             futureImprovements: [
-              'Integrate real-time transaction monitoring for immediate fraud detection.',
-              'Experiment with deep learning models for improved performance.',
+              'Incorporate live match data for real-time score predictions.',
+              'Enhance model accuracy using deep learning techniques.',
+              'Expand the dataset to include more historical matches for better generalization.',
             ],
           },
           {
             id: 3,
             name: 'Laptop Price Prediction',
-            image: laptopImg, // Replace with your actual image import
+            image: laptop2Img, // Replace with your actual image import
             demoLink: 'https://your-demo-link.com/laptop-price-prediction',
-            githubLink: 'https://github.com/your-repo/laptop-price-prediction',
+            githubLink: 'https://github.com/vanshp17/laptop-price-predictor',
+            problemStatement:'Predicting laptop prices based on specifications using a machine learning model and deploying it as a Streamlit web application.',
+            objective: 'To develop an interactive web application that allows users to input laptop specifications and receive an estimated price prediction using a trained machine learning model.',
             dataCollection: [
-              'Collected data on laptop specifications, prices, and user ratings from multiple online retailers.',
-              'Cleaned the dataset by handling missing values and normalizing price ranges.',
-              'Feature engineered attributes such as processor type, RAM size, storage type, and brand.',
+              'Loaded the dataset (laptop_data.csv) and inspected for missing values and duplicates.',
+              'Cleaned the data by dropping unnecessary columns and converting data types.',
+              'Engineered new features such as:',
+              'Touchscreen & IPS Display (Binary feature extraction)',
+              'PPI (Pixels Per Inch) (Derived from screen resolution)',
+              'CPU Brand (Extracted from CPU specifications)',
+              'Memory Splitting (Separated HDD and SSD capacities',
             ],
             eda: [
-              'Visualized relationships between features and prices using scatter plots and box plots.',
-              'Explored correlations between specifications and market prices.',
-              'Identified outliers in pricing based on specifications.',
+              'Analyzed feature distributions and their impact on price.',
+              'Identified correlations between laptop specifications and price.',
+              'Visualized key insights using Seaborn and Matplotlib.',
             ],
             modeling: [
-              'Built regression models including Linear Regression, Random Forest, and Gradient Boosting.',
-              'Performed hyperparameter tuning to optimize model performance.',
+              'Trained multiple regression models, including: ',
+              'Linear Regression,Ridge Regression,Lasso Regression,KNN (K-Nearest Neighbors),Decision Tree,Support Vector Machine (SVM),Random Forest,Extra Trees,AdaBoost,Gradient Boosting',
+              'Used cross-validation and hyperparameter tuning to optimize model performance.',
             ],
-            keyFeatures: ['Processor Type', 'RAM Size', 'Storage Type', 'Brand'],
+            keyFeatures: ['Brand','Type','RAM','Weight','Touchscreen & IPS Display','Screen Size & Resolution','Operating System','CPU Brand','HDD & SSD Storage','GPU'],
             modelEvaluation: [
-              'Evaluated models using RMSE, R-squared, and MAE metrics.',
-              'Conducted cross-validation to ensure model robustness.',
+              'Evaluated models using R² Score and Mean Absolute Error (MAE).',
+              'Selected the best-performing model and saved it as pipe.pkl for deployment.',
             ],
-            insights: 'High RAM size and SSD storage positively influenced laptop prices, while older processors led to lower prices.',
+            insights: ['High-end brands and better GPUs significantly impact price.',
+              'SSD storage contributes more to price variations than HDD.',
+              'Screen resolution and PPI affect pricing due to display quality.',
+
+            ],
             challenges: [
-              'Dealing with the complexity of feature interactions.',
-              'Ensuring data accuracy from multiple sources was challenging.',
+              'Handling categorical variables effectively for model training.',
+              'Dealing with missing or inconsistent data in laptop specifications.',
+              'Balancing model complexity with interpretability for accurate predictions.',
             ],
-            tools: ['Python (Pandas, Scikit-learn, NumPy)', 'Jupyter Notebook for development', 'Matplotlib and Seaborn for visualizations'],
-            results: 'The final model achieved an R-squared value of 0.87, indicating strong predictive performance for laptop prices.',
+            tools: ['Programming Languages: Python',
+              'Libraries: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, XGBoost',
+              'Development Tools: Jupyter Notebook, Streamlit',
+              'Visualization: Streamlit Web App'
+             ],
+            results: 'The Gradient Boosting model achieved 92% accuracy, making it the best-performing model for laptop price prediction.',
             futureImprovements: [
-              'Implement a web application for users to input specifications and receive price predictions.',
-              'Explore advanced techniques such as deep learning for improved accuracy.',
+              'Enhance the model by incorporating additional features.',
+              'Experiment with deep learning models for improved accuracy.',
+              'Improve UI/UX for better user experience.',
+              'Add interactive visualizations for better data insights.',
             ],
           },
           {
             id: 4,
-            name: 'Recommendation System',
-            image: reccsystemImg, // Replace with your actual image import
+            name: 'Car Price Prediction',
+            image: carImg, // Replace with your actual image import
             demoLink: 'https://your-demo-link.com/recommendation-system',
-            githubLink: 'https://github.com/your-repo/recommendation-system',
+            githubLink: 'https://github.com/vanshp17/car-price-predictor',
+            problemStatement:'Predict the price of a used car based on various features such as brand, model, year of purchase, fuel type, and kilometers driven. The goal is to assist buyers and sellers in estimating fair market value.',
+            objective:['Build a machine learning model to predict car prices accurately.',
+              'Develop a user-friendly web interface for price estimation.',
+              'Deploy the model using Flask for real-time predictions.'],
             dataCollection: [
-              'Collected user-item interaction data from the platform.',
-              'Handled missing values and performed normalization.',
-              'Engineered features such as user preferences and item popularity.',
+              'Collected used car listing data from a reliable dataset.',
+              'Handled missing values and converted categorical features into numerical format.',
+              'Engineered features such as car age, fuel type, and brand popularity.',
             ],
             eda: [
-              'Analyzed user behavior through visualizations of interaction patterns.',
-              'Explored relationships between user demographics and preferences.',
-              'Identified potential biases in the data affecting recommendations.',
+              'Analyzed price distribution across different brands and models.',
+              'Visualized the impact of features like fuel type, kilometers driven, and car age on price.',
+              'Identified data patterns to improve model performance.',
             ],
             modeling: [
-              'Developed collaborative filtering and content-based filtering models.',
-              'Utilized matrix factorization techniques to improve recommendations.',
+              'Tested multiple regression models, including Linear Regression and Random Forest.',
+              'Selected Gradient Boosting as the final model due to its superior performance.',
             ],
-            keyFeatures: ['User Preferences', 'Item Attributes', 'Interaction History'],
+            keyFeatures: ['Car Brand & Model – Significant impact on pricing.',
+              'Year of Purchase – Older cars tend to depreciate more.',
+              'Fuel Type & Transmission – Affects demand and resale value.',
+              'Kilometers Driven – More usage generally reduces price.',
+            ],
             modelEvaluation: [
-              'Assessed models using metrics like RMSE, precision at k, and recall.',
-              'Conducted A/B testing to validate recommendation effectiveness.',
+              'Evaluated models using R² score and Mean Absolute Error (MAE).',
+             ' Gradient Boosting achieved the best performance with an R² score of 0.91.',
             ],
-            insights: 'Users showed a strong preference for items similar to their past interactions.',
+            insights: [
+              'Cars with lower mileage and recent manufacturing years have higher resale values.',
+'Diesel and petrol cars have different depreciation patterns.',
+'Popular brands retain their value better than lesser-known brands.',
+            ],
             challenges: [
-              'Sparsity of user-item interaction data was a significant issue.',
-              'Scalability of the recommendation engine for a large user base.',
+              'Handling missing and inconsistent data across different car models.',
+              'Accounting for external market factors affecting car prices.',
             ],
-            tools: ['Python (Surprise, Pandas, NumPy)', 'Jupyter Notebook for development', 'Dash for web app deployment'],
-            results: 'The recommendation system improved user engagement by 30%, enhancing user satisfaction.',
+            tools: ['Python (Surprise, Pandas, NumPy)', 'Jupyter Notebook for  model training and analysis', 'Flask for web application deployment',
+'HTML, Bootstrap for front-end development'],
+            results: [
+              'The model provides accurate car price predictions with 91% accuracy.',
+              'The web application allows users to input car details and get instant price estimates.',
+            ],
             futureImprovements: [
-              'Incorporate more advanced NLP techniques for content-based recommendations.',
-              'Explore reinforcement learning for dynamic recommendations.',
+              'Integrate more features like car condition, insurance status, and accident history.',
+              'Explore deep learning techniques for price prediction.',
             ],
           }
         
@@ -324,77 +504,105 @@
   const ProjectDetail = ({ project }) => (
   <div className="project-detail">
     <h2>{project.name}</h2>
-    <img src={project.image} alt={`${project.name} Image`} style={{ width: '60%', height: 'auto', margin: '20px 0' }} />
+    <img src={project.image} alt={project.name} style={{ width: '60%', height: 'auto', margin: '20px 0' }} />
+    
     <div className="project-links">
-      <a href={project.demoLink} target="_blank" rel="noopener noreferrer">Live Demo</a>
-      <a href={project.githubLink} target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+      {project.demoLink && <a href={project.demoLink} target="_blank" rel="noopener noreferrer">Live Demo</a>}
+      {project.githubLink && <a href={project.githubLink} target="_blank" rel="noopener noreferrer">GitHub Repository</a>}
     </div>
+    
     <h4>Problem Statement:</h4>
-    <p>The project involves analyzing data {project.problem}</p>
+    <p>{project.problemStatement}</p>
+
     <h4>Objective:</h4>
-    <p>To build a machine learning model that {project.solution}. The project involves analyzing data, identifying key indicators, and creating an actionable tool that helps stakeholders make informed decisions.</p>
+    <p>{project.objective}</p>
+
     <h4>Project Scope:</h4>
     <ol>
       <li><strong>Data Collection & Preparation:</strong>
         <ul>
-          {project.dataCollection.map((item, index) => (
+          {project.dataCollection?.map((item, index) => (
             <li key={index}>{item}</li>
           ))}
         </ul>
       </li>
+
       <li><strong>Exploratory Data Analysis (EDA):</strong>
         <ul>
-          {project.eda.map((item, index) => (
+          {project.eda?.map((item, index) => (
             <li key={index}>{item}</li>
           ))}
         </ul>
       </li>
-      <li><strong>Modeling Approach:</strong>
-        <ul>
-          {project.modeling.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))}
-        </ul>
-      </li>
+
+      {/* ✅ Conditionally render Modeling Approach only if it exists */}
+      {project.modeling && project.modeling.length > 0 && (
+        <li><strong>Modeling Approach:</strong>
+          <ul>
+            {project.modeling.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        </li>
+      )}
+
       <li><strong>Key Features Identified:</strong>
         <ul>
-          {project.keyFeatures.map((item, index) => (
+          {project.keyFeatures?.map((item, index) => (
             <li key={index}>{item}</li>
           ))}
         </ul>
       </li>
-      <li><strong>Model Evaluation:</strong>
-        <ul>
-          {project.modelEvaluation.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))}
-        </ul>
-      </li>
+
+      {/* ✅ Conditionally render Model Evaluation only if it exists */}
+      {project.modelEvaluation && project.modelEvaluation.length > 0 && (
+        <li><strong>Model Evaluation:</strong>
+          <ul>
+            {project.modelEvaluation.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        </li>
+      )}
     </ol>
+
     <h4>Insights & Recommendations:</h4>
-    <p>{project.insights}</p>
+    {/* <p>{project.insights}</p> */}
+    <ul>
+      {project.insights?.map((insights, index) => (
+        <li key={index}>{insights}</li>
+      ))}
+    </ul>
+    
+
     <h4>Challenges Faced:</h4>
     <ul>
-      {project.challenges.map((challenge, index) => (
+      {project.challenges?.map((challenge, index) => (
         <li key={index}>{challenge}</li>
       ))}
     </ul>
+
     <h4>Tools & Technologies Used:</h4>
     <ul>
-      {project.tools.map((tool, index) => (
+      {project.tools?.map((tool, index) => (
         <li key={index}>{tool}</li>
       ))}
     </ul>
+
     <h4>Results:</h4>
     <p>{project.results}</p>
+
     <h4>Future Improvements:</h4>
     <ul>
-      {project.futureImprovements.map((improvement, index) => (
+      {project.futureImprovements?.map((improvement, index) => (
         <li key={index}>{improvement}</li>
       ))}
     </ul>
   </div>
 );
+
+  
+
   
   
   const Projects = () => {
