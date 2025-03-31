@@ -11,6 +11,7 @@ function About() {
     },
     
   ];
+  
 
   return (
     <section id="about" className="about">
