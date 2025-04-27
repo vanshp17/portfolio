@@ -32,7 +32,7 @@ It is designed with a focus on **simplicity**, **responsiveness**, and **profess
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/vanshp17/my-portfolio.git
+   git clone https://github.com/vanshp17/portfolio.git
    ```
 
 2. Navigate to the project folder:
