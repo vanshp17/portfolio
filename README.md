@@ -38,7 +38,7 @@ It is designed with a focus on **simplicity**, **responsiveness**, and **profess
 2. Navigate to the project folder:
 
    ```bash
-   cd my-portfolio
+   cd portfolio
    ```
 
 3. Install dependencies:
