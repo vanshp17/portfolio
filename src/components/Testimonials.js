@@ -5,30 +5,30 @@ import '../styles/Testimonials.css';
 const testimonialsData = [
   {
     id: 1,
-    name: 'Jane Doe',
-    role: 'Data Scientist at TechCorp',
-    photo: 'https://thispersondoesnotexist.com/', // Using placeholder for demo
+    name: 'Ganaram Chaudhary',
+    role: 'Data Engineer at Iron Mountain',
+    photo: 'https://media.licdn.com/dms/image/v2/D4D03AQGSbU-1uCMC8w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1709788912384?e=1751500800&v=beta&t=hltTN8QjDMNrmVZ2Yd3l4RfNDjTcPLfW0eWe-IHH7V8', // Using placeholder for demo
     testimonial: 'Vanshita is an exceptional data scientist. Her analytical skills and attention to detail significantly improved our project outcomes. Highly recommended!'
   },
   {
     id: 2,
-    name: 'John Smith',
-    role: 'Senior Data Analyst at DataCo',
-    photo: 'https://thispersondoesnotexist.com/', // Using placeholder for demo
+    name: 'Saad Shaikh',
+    role: 'Date Engineer at Revsure AI',
+    photo: 'https://media.licdn.com/dms/image/v2/D4D03AQFyl46zsJGPdA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1716388546979?e=1751500800&v=beta&t=RiP3oN4objen9jehZLVy_qqjqprfJNPH5rOjP99MgLA', // Using placeholder for demo
     testimonial: 'Working with Vanshita was a pleasure. She brings a wealth of knowledge and a proactive approach to problem-solving that makes her a valuable asset to any team.'
   },
   {
     id: 3,
-    name: 'Emily Johnson',
-    role: 'Lead Data Engineer at AnalyticsPlus',
-    photo: 'https://thispersondoesnotexist.com/', // Using placeholder for demo
+    name: 'Aishwarya Bhosale',
+    role: 'Senior Test Engineer at QualityKiosk Technologies',
+    photo: 'https://media.licdn.com/dms/image/v2/D4D03AQEV2tE4BVTfyg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1707747359836?e=1751500800&v=beta&t=_n_o_jsBQZIXlAPbCwRe1FbWHEk7drMqkaNKCImqxGg', // Using placeholder for demo
     testimonial: `Vanshita's ability to translate complex data into actionable insights is impressive. Her contributions were instrumental in achieving our project goals.`
   },
   {
     id: 4,
-    name: 'Michael Chen',
-    role: 'VP of Analytics at DataDrive',
-    photo: 'https://thispersondoesnotexist.com/', // Using placeholder for demo
+    name: 'Shashank Bhosale',
+    role: 'Data Analyst Engineer at Niveus Solutions',
+    photo: 'https://media.licdn.com/dms/image/v2/D5603AQF4qFg2Iqx7Ew/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1689012553921?e=1751500800&v=beta&t=Co1RJCXoxrrt0aBJSaFj-kbkcrI0WAQEHIIHVWmvuNw', // Using placeholder for demo
     testimonial: `Few professionals I've worked with match Vanshita's combination of technical expertise and collaborative spirit. She consistently delivers results that exceed expectations.`
   }
 ];

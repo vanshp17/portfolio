@@ -4,7 +4,7 @@ import '../styles/Hero.css'; // Import the CSS for styling
 function Hero() {
   const [text, setText] = useState('');
   const [index, setIndex] = useState(0);
-  const titles = ["Data Scientist", "Data Analyst", "Machine Learning Engineer", "AI Enthusiast"];
+  const titles = ["Data Scientist", "Data Analyst", "AI Enthusiast"];
   const [currentTitle, setCurrentTitle] = useState(0);
 
   // Typing effect

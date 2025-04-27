@@ -87,9 +87,9 @@ const Skills = () => {
       title: "Deep Learning",
       icon: <FaRobot />,
       skills: [
-        { icon: <SiTensorflow />, name: "TensorFlow", level: 75 },
-        { icon: <SiPytorch />, name: "PyTorch", level: 70 },
-        { icon: <FaCogs />, name: "Neural Networks", level: 80 }
+        { icon: <SiTensorflow />, name: "TensorFlow", level: 70 },
+        { icon: <SiPytorch />, name: "PyTorch", level: 65 },
+        { icon: <FaCogs />, name: "Neural Networks", level: 70 }
       ]
     },
     {
@@ -105,18 +105,18 @@ const Skills = () => {
       title: "Big Data",
       icon: <FaDatabase />,
       skills: [
-        { icon: <FaLaptopCode />, name: "Spark", level: 70 },
-        { icon: <FaDatabase />, name: "NoSQL", level: 65 },
-        { icon: <FaDatabase />, name: "Data Pipelines", level: 75 }
+        { icon: <FaLaptopCode />, name: "Spark", level: 50 },
+        { icon: <FaDatabase />, name: "NoSQL", level: 60 },
+        { icon: <FaDatabase />, name: "Data Pipelines", level: 70 }
       ]
     },
     {
       title: "Cloud Services",
       icon: <AiOutlineCloud />,
       skills: [
-        { icon: <SiMicrosoftazure />, name: "Azure", level: 80 },
-        { icon: <FaServer />, name: "Cloud Compute", level: 75 },
-        { icon: <FaDatabase />, name: "Cloud Storage", level: 70 }
+        { icon: <SiMicrosoftazure />, name: "Azure", level: 70 },
+        { icon: <FaServer />, name: "Cloud Compute", level: 65 },
+        { icon: <FaDatabase />, name: "Cloud Storage", level: 65 }
       ]
     }
   ];
