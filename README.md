@@ -68,7 +68,7 @@ It is designed with a focus on **simplicity**, **responsiveness**, and **profess
 
 ## 📬 Connect with Me
 
-- **LinkedIn:** [Vanshita Patil](https://linkedin.com/in/vanshitapatil)
+- **LinkedIn:** [Vanshita Patil](https://linkedin.com/in/vanshita-patil)
 - **Email:** mastervansh01@gmail.com
 - **GitHub:** [vanshp17](https://github.com/vanshp17)
 
