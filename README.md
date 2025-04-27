@@ -22,7 +22,7 @@ It is designed with a focus on **simplicity**, **responsiveness**, and **profess
 ## 🛠️ Tech Stack
 
 - **Frontend:** React.js
-- **Styling:** CSS3, Tailwind CSS (if used)
+- **Styling:** CSS3
 - **Deployment:** Netlify
 
 ---
